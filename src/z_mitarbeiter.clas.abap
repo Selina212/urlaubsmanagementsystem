@@ -1,14 +1,17 @@
-class Z_MITARBEITER definition
-  public
-  final
-  create public .
+CLASS z_mitarbeiter DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
 
-public section.
-protected section.
-private section.
+  PUBLIC SECTION.
+*Klasse kann durch das Interface direkt in Eclipse ausgeführt werden
+  INTERFACES if_oo_adt_classrun.
+
+  PROTECTED SECTION.
+  PRIVATE SECTION.
 ENDCLASS.
 
 
 
-CLASS Z_MITARBEITER IMPLEMENTATION.
+CLASS z_mitarbeiter IMPLEMENTATION.
 ENDCLASS.
