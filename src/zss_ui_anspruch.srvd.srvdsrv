@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition Urlaubsanspruch'
+define service Zss_ui_Anspruch {
+  expose Zss_C_Anspruch as Anspruch;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition Urlaubsantrag'
+define service Zss_ui_Antrag {
+  expose Zss_C_Antrag as Antrag;
+}
