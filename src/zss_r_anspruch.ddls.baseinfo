@@ -6,7 +6,9 @@
 "ZSS_URLAUBSANSPR"
 ],
 "ASSOCIATED":
-[],
+[
+"ZSS_R_MITARBEITER"
+],
 "BASE":
 [],
 "ANNO_REF":

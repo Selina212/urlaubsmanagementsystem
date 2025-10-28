@@ -6,9 +6,14 @@
 "ZSS_R_ANTRAG"
 ],
 "ASSOCIATED":
-[],
+[
+"ZSS_C_MITARBEITER",
+"ZSS_R_MITARBEITER"
+],
 "BASE":
-[],
+[
+"ZSS_R_ANTRAG"
+],
 "ANNO_REF":
 [],
 "SCALAR_FUNCTION":

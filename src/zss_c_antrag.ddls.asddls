@@ -1,7 +1,7 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Projection View Mitarbeiter'
 
-define root view entity Zss_C_Antrag as projection on Zss_R_Antrag
+define view entity Zss_C_Antrag as projection on Zss_R_Antrag
 {
     key IDUUID,
  AntragstellerUuid,
@@ -18,5 +18,6 @@ define root view entity Zss_C_Antrag as projection on Zss_R_Antrag
       CreatedBy,
       CreatedAt,
       LastChangedBy,
-      LastChangedAt
+      LastChangedAt,
+      _Mitarbeiter : redirected to parent Zss_C_Mitarbeiter
 }
