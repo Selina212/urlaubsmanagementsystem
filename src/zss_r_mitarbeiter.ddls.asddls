@@ -1,6 +1,7 @@
 
 @AccessControl.authorizationCheck: #NOT_REQUIRED
-@EndUserText.label: 'Travel'
+@EndUserText.label: 'Mitarbeiter'
+
 define root view entity Zss_R_Mitarbeiter
   as select from zss_mitarbeiter
   composition [0..*] of Zss_R_Anspruch as _Anspruch

@@ -1,0 +1,82 @@
+managed implementation in class zbp_ss_r_mitarbeiter unique;
+strict ( 2 );
+
+define behavior for Zss_R_Mitarbeiter //alias <alias_name>
+persistent table zss_mitarbeiter
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ;
+  update;
+  delete;
+  field ( readonly ) IDUUID;
+  association _Anspruch { create; }
+  association _Antrag { create; }
+
+  mapping for ZSS_MITARBEITER corresponding{
+
+
+
+  mitarbeiternummer = mitarbeiternummer;
+  vorname           = vorname;
+  nachname          = nachname ;
+  eintrittsdatum    = eintrittsdatum;
+  createdby        = created_by;
+  createdat        = created_at;
+  lastchangedby   = last_changed_by;
+  lastchangedat   = last_changed_at;
+
+  }
+}
+
+define behavior for Zss_R_Anspruch //alias <alias_name>
+persistent table zss_urlaubsanspr
+lock dependent by _Mitarbeiter
+authorization dependent by _Mitarbeiter
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) IDUUID;
+  association _Mitarbeiter;
+}
+
+define behavior for Zss_R_Antrag //alias <alias_name>
+persistent table zss_urlaubsantr
+lock dependent by _Mitarbeiter
+authorization dependent by _Mitarbeiter
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) IDUUID;
+  association _Mitarbeiter;
+
+  mapping for ZSS_URLAUBSANSPR corresponding{
+
+
+  urlaubstage      = urlaubstage ;
+  createdby       = created_by ;
+  createdat       = created_at;
+  lastchangedby  = last_changed_by;
+  lastchangedat  = last_changed_at;
+
+
+  }
+
+  mapping for ZSS_URLAUBSANTR corresponding{
+
+  genehmigenderuuid = genehmigender_uuid;
+  startdatum         = startdatum;
+  enddatum           = enddatum;
+  urlaubstage        = urlaubstage;
+  kommentar          = kommentar;
+  status             = status;
+  createdby         = created_by;
+  createdat         = created_at;
+  lastchangedby    = last_changed_by ;
+  lastchangedat    = last_changed_at;
+
+  }
+}
