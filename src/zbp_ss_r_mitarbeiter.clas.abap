@@ -1,0 +1,5 @@
+CLASS zbp_ss_r_mitarbeiter DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zss_r_mitarbeiter.
+ENDCLASS.
+
+CLASS zbp_ss_r_mitarbeiter IMPLEMENTATION.
+ENDCLASS.

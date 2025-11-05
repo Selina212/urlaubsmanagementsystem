@@ -1,4 +1,3 @@
-
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Projection View Mitarbeiter'
 @Search.searchable: true

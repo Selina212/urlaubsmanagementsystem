@@ -10,14 +10,14 @@ authorization master ( instance )
   create ;
   update;
   delete;
-  field ( readonly ) IDUUID;
+  field ( readonly, numbering : managed ) IDUUID;
   association _Anspruch { create; }
   association _Antrag { create; }
 
   mapping for ZSS_MITARBEITER corresponding{
 
 
-
+IdUuid = id_uuid;
   mitarbeiternummer = mitarbeiternummer;
   vorname           = vorname;
   nachname          = nachname ;
@@ -40,6 +40,18 @@ authorization dependent by _Mitarbeiter
   delete;
   field ( readonly ) IDUUID;
   association _Mitarbeiter;
+
+  mapping for ZSS_URLAUBSANSPR corresponding{
+
+jahr = jahr;
+  urlaubstage      = urlaubstage ;
+  createdby       = created_by ;
+  createdat       = created_at;
+  lastchangedby  = last_changed_by;
+  lastchangedat  = last_changed_at;
+MitarbeiterUuid = mitarbeiter_uuid;
+iduuid = id_uuid;
+  }
 }
 
 define behavior for Zss_R_Antrag //alias <alias_name>
@@ -53,20 +65,12 @@ authorization dependent by _Mitarbeiter
   field ( readonly ) IDUUID;
   association _Mitarbeiter;
 
-  mapping for ZSS_URLAUBSANSPR corresponding{
 
-
-  urlaubstage      = urlaubstage ;
-  createdby       = created_by ;
-  createdat       = created_at;
-  lastchangedby  = last_changed_by;
-  lastchangedat  = last_changed_at;
-
-
-  }
 
   mapping for ZSS_URLAUBSANTR corresponding{
 
+AntragstellerUuid = antragsteller_uuid;
+iduuid = id_uuid;
   genehmigenderuuid = genehmigender_uuid;
   startdatum         = startdatum;
   enddatum           = enddatum;
