@@ -28,6 +28,9 @@ as projection on Zss_R_Mitarbeiter
       LastChangedBy,
       LastChangedAt,
       
+      GenehmigenderName,
+      // BeginDateCriticality,
+      
       _Anspruch : redirected to composition child Zss_C_Anspruch,
        _Antrag : redirected to composition child Zss_C_Antrag
 }
