@@ -14,6 +14,13 @@ authorization master ( instance )
   association _Anspruch { create; }
   association _Antrag { create; }
 
+static action UeberschritteneUrlaubstage;
+
+validation ValidateDates on save { create; }
+
+ field ( mandatory : create )  Vorname;
+  field ( readonly : update ) Eintrittsdatum;
+
   mapping for ZSS_MITARBEITER corresponding{
 
 

@@ -9,6 +9,8 @@ define behavior for Zss_C_Mitarbeiter alias Mitarbeiter//alias <alias_name>
 
   use association _Anspruch { create; }
   use association _Antrag { create; }
+
+  use action UeberschritteneUrlaubstage;
 }
 
 define behavior for Zss_C_Anspruch alias Anspruch//alias <alias_name>

@@ -6,6 +6,7 @@
   title.value: 'Mitarbeiternummer',
   description.value: 'Mitarbeiternummer'
 }
+
 annotate view Zss_C_Mitarbeiter with
 {
 
@@ -20,10 +21,12 @@ annotate view Zss_C_Mitarbeiter with
     
   ]
 
+ /* Actions */
+  @UI.lineItem: [{ position: 10, dataAction: 'UeberschritteneUrlaubstage', label: 'Ueberschrittene Urlaubstage', type: #FOR_ACTION }]
   /* Fields */
 
 
-  @UI.lineItem: [{ position: 10 }]
+
   @UI.fieldGroup: [{ position: 10, qualifier: 'Admindaten' }]
   IDUUID;
 
